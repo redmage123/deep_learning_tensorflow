@@ -6,7 +6,7 @@ import sys
 
 
 
-LOGDIR = 'tmp/mnist_tutorial/clean0'
+LOGDIR = 'tmp/mnist_tutorial/clean/'
 LABELS = os.path.join(os.getcwd(), 'labels_1024.tsv')
 SPRITES = os.path.join(os.getcwd(), 'sprite_1024.png')
 print ('Loading data')
@@ -58,7 +58,7 @@ with tf.name_scope('accuracy'):
 with tf.Session() as sess:
 
 # Step 1.  Add the FileWriter step to write the logs out to disk.
-    writer = tf.summary.FileWriter('/tmp/mnist_demo/2')
+    writer = tf.summary.FileWriter(LOGDIR)
     writer.add_graph(sess.graph)
     print ('Initializing graph variables')
     sess.run(tf.global_variables_initializer())

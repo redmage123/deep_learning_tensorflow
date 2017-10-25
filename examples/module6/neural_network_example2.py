@@ -78,7 +78,6 @@ def train_neural_network(batch_size, mnist, layer_sizes):
         accuracy = tf.reduce_mean(tf.cast(correct, 'float'))
         print('accuracy', accuracy.eval({x:mnist.test.images, y:mnist.test.labels}))
 
-print ('Starting here')
 #
 # Define the neural network topology and processing parameters
 #
@@ -91,12 +90,10 @@ layer_sizes = [input_layer_nodes, 500, 500, 500, n_classes]
 #
 # Load the mnist data
 #
-print ('Loading data')
 mnist = input_data.read_data_sets("/tmp/data", one_hot=True)
 
 #
 # Let'er rip
 #
-print ('Training network')
 train_neural_network(batch_size, mnist, layer_sizes)
 

@@ -71,6 +71,8 @@ err,target = 1,0
 epoch,max_epochs = 0,10
 
 
+print ('shape y = ',y.shape)
+print ('shape train_y = ',train_y.shape)
 while err> target and epoch < max_epochs:
     epoch +=1
     err,_ = sess.run([mse,train],feed_dict = {x:train_x,y:train_y})
@@ -93,6 +95,7 @@ def my_and(a,b):
 
     test_x = [[a,b,1]]
     o = sess.run(output,feed_dict = {x: test_x,y:train_y})
+    print ('o = ',o)
     if o == 1.0:
         return True
     else:

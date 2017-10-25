@@ -44,6 +44,7 @@ tfsession.close()
 # variable, so we can move values back and forth between normal 
 # python and tensorflow session objects. 
 
+with tf.Session() as sess:
     output = sess.run(result)
     print (output)
 
