@@ -1,0 +1,9 @@
+embeddings {
+  tensor_name: "test_embedding:0"
+  metadata_path: "/home/bbrelin/deep_learning_tensorflow/examples/tensorboard/labels_1024.tsv"
+  sprite {
+    image_path: "/home/bbrelin/deep_learning_tensorflow/examples/tensorboard/sprite_1024.png"
+    single_image_dim: 28
+    single_image_dim: 28
+  }
+}

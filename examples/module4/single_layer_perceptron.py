@@ -72,7 +72,7 @@ epoch,max_epochs = 0,10
 
 
 print ('shape y = ',y.shape)
-print ('shape train_y = ',train_y.shape)
+#print ('shape train_y = ',train_y.shape)
 while err> target and epoch < max_epochs:
     epoch +=1
     err,_ = sess.run([mse,train],feed_dict = {x:train_x,y:train_y})

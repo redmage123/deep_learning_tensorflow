@@ -12,11 +12,11 @@ with tf.name_scope('Part_1'):
 
 ## Part 2
 with tf.name_scope('Part_2'):
-    x = tf.Variable(1,dtype=tf.float32,name = 'c')
-    y = tf.Variable(1,dtype=tf.float32,name = 'c')
+    x = tf.Variable(1,dtype=tf.float32,name = 'x')
+    y = tf.Variable(1,dtype=tf.float32,name = 'y')
 
-    r1 = tf.assign(y,tf.divide(y,2))
-    r2 = tf.assign(x,tf.add(r1,x))
+    r1 = tf.assign(y,tf.divide(y,2),name='r1')
+    r2 = tf.assign(x,tf.add(r1,x),name='r2')
 
 with tf.Session() as sess:
 
